@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AkunController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HutangpiutangController;
 use App\Http\Controllers\KategoriController;
@@ -8,9 +9,13 @@ use App\Http\Controllers\SettingwebController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransaksiController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
-    return view('welcome');
+    if (Auth::check()) {
+        return redirect('/admin/dashboard'); // Jika sudah login, arahkan ke admin/dashboard
+    }
+    return redirect('/login'); // Jika belum login, arahkan ke halaman login
 });
 
 Route::get('admin/dashboard', [DashboardController::class, 'index'])

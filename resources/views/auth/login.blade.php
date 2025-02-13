@@ -24,7 +24,7 @@
                                     <img src="assets/images/admin.png" alt="" height="20">
                                 </a> --}}
                             </div>
-                            <h3 class="mt-3 fs-15 fw-medium">Sistem Manajemen Keuangan</h3>
+                            <h3 class="mt-3 fs-15 fw-medium">Sistem Informasi Manajemen Keuangan</h3>
                         </div>
                     </div>
                 </div>
